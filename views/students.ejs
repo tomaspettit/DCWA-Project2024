@@ -1,0 +1,33 @@
+<style>
+    table, td, th{
+border: 1px solid black;
+    }
+</style>
+
+<h1>Students</h1>
+
+<!-- Link for Adding Students -->
+<a href='/students/add'>Add Student</a></br>
+
+<!-- Link for the Home Page -->
+<a href='/'>Home</a></br>
+
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Action</th>
+    </tr>
+    <% studentList.forEach((s) =>
+    { %>
+    <tr>
+        <td><%= s.sid %></td>
+        <td><%= s.name %></td>
+        <td><%= s.age %></td>
+        
+        <!-- Link for Updating Students -->
+        <td><a href="/students/edit/<%= s.sid %>">Update</a></td>
+    </tr>
+    <% }) %>
+</table>

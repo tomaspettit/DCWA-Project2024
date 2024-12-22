@@ -1,0 +1,30 @@
+<style>
+    table, td, th{
+border: 1px solid black;
+    }
+</style>
+
+<h1>Lecturers</h1>
+
+<!-- Link for the Home Page -->
+<a href='/'>Home</a></br>
+
+<table>
+    <tr>
+        <th>Lecturer ID</th>
+        <th>Name</th>
+        <th>Department ID</th>
+        <th>Action</th>
+    </tr>
+    <% lecturerList.forEach((l) =>
+    { %>
+    <tr>
+        <td><%= l._id %></td>
+        <td><%= l.name %></td>
+        <td><%= l.did %></td>
+
+        <!-- Link for Deleting Data -->
+        <td><a href="/lecturers/delete/<%= l._id %>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>

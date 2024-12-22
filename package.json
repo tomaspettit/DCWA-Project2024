@@ -1,0 +1,23 @@
+{
+  "name": "q1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-validator": "^7.2.0",
+    "init": "^0.1.2",
+    "mongodb": "^6.12.0",
+    "nodemon": "^3.1.9",
+    "promise-mysql": "^5.2.0"
+  }
+}

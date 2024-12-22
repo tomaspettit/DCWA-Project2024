@@ -1,0 +1,33 @@
+<title>Update Student</title>
+
+<!-- Link for the Home Page -->
+<a href="/">Home</a>
+
+<h1>Update Student</h1>
+
+    <!-- Validation Errors -->
+    <% if (errors != undefined) { %>
+        <ul>
+            <% errors.forEach((error) => { %>
+            <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+    <!-- Form for Updating Students-->
+    <form action="/students/edit/<%= sid %>" method="POST">
+        <div>
+            <label for="sid">Student ID</label>
+            <input type="text" id="sid" name="sid" value="<%= student.sid %>" required>
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="<%= student.name %>" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" value="<%= student.age %>" required>
+        </div>
+        <button type="submit">OK</button>
+    </form>
+

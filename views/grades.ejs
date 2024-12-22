@@ -1,0 +1,26 @@
+<style>
+    table, td, th{
+border: 1px solid black;
+    }
+</style>
+
+<h1>Grades</h1>
+
+<!-- Link for the Home Page -->
+<a href='/'>Home</a></br>
+
+<table>
+    <tr>
+        <th>Student</th>
+        <th>Module</th>
+        <th>Grade</th>
+    </tr>
+    <% gradeList.forEach((gr) =>
+    { %>
+    <tr>
+        <td><%= gr.Student %></td>
+        <td><%= gr.Module %></td>
+        <td><%= gr.Grade %></td>
+    </tr>
+    <% }) %>
+</table>

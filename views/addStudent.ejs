@@ -1,0 +1,32 @@
+<title>Add Student</title>
+
+<!-- Link for the Home Page -->
+<a href="/">Home</a>
+
+<h1>Add Student</h1>
+
+    <!-- Validation Errors -->
+    <% if (errors) { %>
+        <ul>
+            <% errors.forEach((error) => { %>
+                <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+    <!-- Form for Adding Students-->
+    <form action="/students/add" method="POST">
+        <div>
+            <label for="sid">Student ID</label>
+            <input type="text" id="sid" name="sid" required>
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <button type="submit">Add Student</button>
+    </form>   
